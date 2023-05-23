@@ -11,7 +11,7 @@ const RegButton = document.getElementById('RegButton');
 const register = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
 
-    if (Password.value === ConfirmPassword.value) {
+    if (Password.value == ConfirmPassword.value) {
         let userObj = {
             identification: Identification.value,
             password: Password.value,
@@ -32,28 +32,49 @@ const register = (event) => {
         formData.append('identification', Identification);
         formData.append('username', UserName);
         formData.append('password', Password);
-        fetch('http://192.168.56.7:8080/users/register', {
+        fetch('http://localhost:8080/users/register', {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(userObj)
-        });
-
-
+        })
+        .then(response => {
+            console.log(response); // Imprime la respuesta HTTP en la consola
+            if(response.status=="200"){
+                alert("Bienvenido")
+                let logRequest = {
+                    identification: Identification.value,
+                    password: Password.value,
+                };
+                fetch('http://localhost:8080/users/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(logRequest)
+                }).then(response => {
+                    return response.json();
+                }).then(data => {
+                    console.log(data); // Imprime la respuesta en formato JSON en la consola
+                    // Continúa con el manejo de la respuesta aquí
+                    user=data;
+                    localStorage.setItem('Usuario', JSON.stringify(user));
+                    window.location.href = 'Zones.html';
+                })
+            }else{
+                alert(response.status)
+            }
+        })
     } else{
         alert(" Porfavor verifique la contraseña")
 
     }
 };
 
-
-
-
-
 RegButton.addEventListener('click', register);
 
-const login =() => {
+/*const login =() => {
     let userObj = {
         Identification: Identification.value,
         Password: Password.value,
@@ -68,7 +89,7 @@ const login =() => {
     xhr.open('post', '');
     xhr.send(JSON.stringify(userObj));//toJson 
 
-}
+}*/
     
 
 
