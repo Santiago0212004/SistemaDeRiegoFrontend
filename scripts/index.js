@@ -5,6 +5,7 @@ const ConfirmPassword = document.getElementById('ConfirmPassword');
 const UserName = document.getElementById('UserName');
 const AccessKey = document.getElementById('AccessKey');
 const RegButton = document.getElementById('RegButton');
+localStorage.clear();
 //GET Request
 
 

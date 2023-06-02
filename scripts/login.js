@@ -1,6 +1,8 @@
 const Identification = document.getElementById('Identification');
 const Password = document.getElementById('Password');
 const LogButton = document.getElementById('LogButton');
+localStorage.clear();
+
 
 const login = (event) => {
     event.preventDefault();

@@ -92,46 +92,40 @@ body {
     border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 #RectanguloCards{
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background-color: #5AA1BB;*/
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);*/
     width: 70vw;
-    gap: 20px;
+    gap: 10px;
 }
-.Zonecard{
+.Usercard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 25px;
     background-color: #D8DBE0;
     border: 1px solid #000d276e;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.card-img-top{
-    margin-top: 25px;
-    margin-left: 12px;
-}
 .card-body {
+    background-color: #35bf3a;
     width: 350px;
     margin-left: 12px;
     display: flex;
     padding-top: 20px;
     padding-left: 20px;
-    justify-content: space-between; /* Alinea los elementos horizontalmente */
-    align-items: flex-start; /* Alinea los elementos verticalmente */
+    justify-content: space-between; 
   }
-  
-  .card-title {
-    margin-top: 8px;
-  }
-  
-  #detallesBTN {
+
+#detallesBTN {
     color: #385557;
     background-color: #c8d4fd;
     border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
   
 .RectanguloInf{
     height: 10%;
