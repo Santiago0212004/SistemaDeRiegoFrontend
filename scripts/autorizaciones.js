@@ -61,7 +61,7 @@ const agregarAutorizacion = (event) => {
     };
 
     let agregarAutorizacionRespuesta = {
-        master: usuario,
+        user: usuario,
         authorization: autorizacion
     };
 

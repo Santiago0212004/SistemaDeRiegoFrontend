@@ -8,7 +8,8 @@ class User {
         this.user=user;
     }
     render(){
-        
+        let estado = window.localStorage.getItem("Estado");
+
         let container = document.createElement('div');
         container.classList.add('Usercard');
         container.style.width = '900px';
@@ -38,21 +39,24 @@ class User {
         container.appendChild(body);
         body.appendChild(title);
         body.appendChild(text);
-        body.appendChild(info);
+        if(estado=="USUARIOS"){
+            body.appendChild(info);
+            info.textContent = "Detalles";
+        }
         body.appendChild(eliminar);
         
         
 
         title.textContent = this.user.username;
-        text.textContent = this.user.authorization.type;
-        info.textContent = "Detalles";
+        text.textContent = this.user.identification
         eliminar.textContent = "X";
         
+
         info.addEventListener('click', e => {
             e.preventDefault();
             let json = JSON.stringify(this.user);
-            window.localStorage.setItem('UserINFO',json);
-            location.href = "zonasUsuarioInfo.html";
+            window.localStorage.setItem('UsuarioActual',json);
+            location.href = "zonasUsuario.html";
         })
         eliminar.addEventListener('click', e => {
             e.preventDefault();
@@ -79,6 +83,25 @@ class User {
                 });
             }else if(estado=="USUARIOSZONA"){
                 //desenlazar usuario de una zona
+                let jsonZonaActual = window.localStorage.getItem("ZonaActual");
+                const zonaActual = JSON.parse(jsonZonaActual);
+
+                let eliminarEnlaceUsuarioZonaRespuesta = {
+                    master: usuarioMaster,
+                    user: this.user,
+                    zone: zonaActual
+                };
+                fetch('http://localhost:8080/zones/unlink', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(eliminarEnlaceUsuarioZonaRespuesta)
+                })
+                .then(response => {
+                    console.log(response); // Imprime la respuesta HTTP en la consola
+                    return response;
+                });
             }
             location.reload();//Pa recargar la pagina
         })

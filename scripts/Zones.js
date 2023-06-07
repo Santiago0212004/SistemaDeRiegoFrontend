@@ -89,7 +89,7 @@ if(authorization=="MASTER"){
 
         
         let agregarZonaRespuesta = {
-            master: usuario,
+            user: usuario,
             zone: zona
         };
     

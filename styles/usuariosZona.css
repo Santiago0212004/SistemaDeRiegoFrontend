@@ -163,7 +163,7 @@ body {
     align-items: center; /* Centrado vertical */
     justify-content: center; /* Centrado horizontal */
     background-color: #DEE4F5;
-    width: 14%;
+    width: 45%;
 }
 #DescripcionUsuario{
     border-radius: 10px;
@@ -171,7 +171,7 @@ body {
     align-items: center; /* Centrado vertical */
     justify-content: center; /* Centrado horizontal */
     background-color: #DEE4F5;
-    width: 45%;
+    width: 35%;
 }
 #detallesBTN {
     color: #385557;

@@ -8,6 +8,9 @@ class Zone{
     }
     
     render(){
+        let estado = window.localStorage.getItem("Estado");
+
+        
         let container = document.createElement('div');
         container.classList.add('Zonecard');
         container.style.width = '400px';
@@ -40,27 +43,51 @@ class Zone{
 
             eliminar.addEventListener('click', e => {
                 e.preventDefault();
-                //eliminar Zona
-                let zona = {
-                    name: this.zone.name,
-                    description: this.zone.description,
-                    id:this.zone.id
-                };
-                let eliminarZonaRespuesta = {
-                    master: usuarioMaster,
-                    zone: zona
-                };
-                fetch('http://localhost:8080/zones/delete', {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(eliminarZonaRespuesta)
-                })
-                .then(response => {
-                    console.log(response); // Imprime la respuesta HTTP en la consola
-                    return response;
-                });
+                
+                if(estado=="ZONAS"){
+                        //eliminar Zona
+                        let zona = {
+                            name: this.zone.name,
+                            description: this.zone.description,
+                            id:this.zone.id
+                        };
+                        let eliminarZonaRespuesta = {
+                            master: usuarioMaster,
+                            zone: zona
+                        };
+                        fetch('http://localhost:8080/zones/delete', {
+                            method: 'DELETE',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(eliminarZonaRespuesta)
+                        })
+                        .then(response => {
+                            console.log(response); // Imprime la respuesta HTTP en la consola
+                            return response;
+                        });
+                    }else if(estado=="ZONASUSUARIO"){
+                        //desenlazar zona de un usuario
+                        let jsonUsuarioActual = window.localStorage.getItem("UsuarioActual");
+                        const usuarioActual = JSON.parse(jsonUsuarioActual);
+        
+                        let eliminarEnlaceZonaUsuarioRespuesta = {
+                            master: usuarioMaster,
+                            user: usuarioActual,
+                            zone: this.zone
+                        };
+                        fetch('http://localhost:8080/zones/unlink', {
+                            method: 'DELETE',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(eliminarEnlaceZonaUsuarioRespuesta)
+                        })
+                        .then(response => {
+                            console.log(response); // Imprime la respuesta HTTP en la consola
+                            return response;
+                        });
+                    }
                 location.reload();//Pa recargar la pagina
             })
         }
