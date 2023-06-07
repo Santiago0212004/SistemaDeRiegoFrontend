@@ -75,21 +75,18 @@ body {
     border: 1px solid #000d2766;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#AutorizacionesBTM{
+    margin-right: 20px; 
+    width: 130px;
+    color: #000D27;
+    background-color: #E0DDD8;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .RectanguloPrincipal{
     height: 80%;
     background-color: #ECEDF2;
     overflow: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-#AgregarBTM{ 
-    position: absolute;
-    bottom: 12vh; /* Ajusta la distancia desde la parte inferior */
-    right: 14px; /* Ajusta la distancia desde la parte derecha */
-    width: 70px;
-    height: 70px;
-    color: #5AA1BB;
-    background-color: #D8DBE0;
-    border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -111,18 +108,38 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .card-body {
-    background-color: #35bf3a;
+    /*background-color: #35bf3a;*/
     width: 350px;
-    margin-left: 12px;
     display: flex;
-    padding-top: 20px;
-    padding-left: 20px;
     justify-content: space-between; 
   }
-
+#NombreUsuario{
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    background-color: #DEE4F5;
+    width: 14%;
+}
+#DescripcionUsuario{
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    background-color: #DEE4F5;
+    width: 45%;
+}
 #detallesBTN {
     color: #385557;
     background-color: #c8d4fd;
+    border: 1px solid #000d276a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#eliminarBTN {
+    border-radius: 15px;
+    width: 40px;
+    color: #385557;
+    background-color: #FF8888;
     border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }

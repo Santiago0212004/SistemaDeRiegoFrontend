@@ -59,25 +59,9 @@ body {
     margin: -4px; /* Agregamos un margen negativo para compensar el tamaño reducido */
   }
 
-#ZonasBTM{ 
+#AtrasBTM{ 
     margin-right: 20px; 
-    width: 120px;
-    color: #000D27;
-    background-color: #E0DDD8;
-    border: 1px solid #000d2766;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-#UsuariosBTM{
-    margin-right: 20px; 
-    width: 120px;
-    color: #000D27;
-    background-color: #E0DDD8;
-    border: 1px solid #000d2766;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-#AutorizacionesBTM{
-    margin-right: 20px; 
-    width: 130px;
+    width: 80px;
     color: #000D27;
     background-color: #E0DDD8;
     border: 1px solid #000d2766;
@@ -139,16 +123,7 @@ body {
     background-color: #c8d4fd;
     border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#eliminarBTN {
-    border-radius: 15px;
-    width: 40px;
-    color: #385557;
-    background-color: #FF8888;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  }
   
 .RectanguloInf{
     height: 10%;

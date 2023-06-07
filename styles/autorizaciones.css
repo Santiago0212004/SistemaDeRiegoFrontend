@@ -89,17 +89,21 @@ body {
     overflow: auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#ValorAutorizacion{
+    width: 80%;
+    position: absolute;
+    top: 15%;
+}
 #AgregarBTM{ 
     position: absolute;
-    bottom: 12vh; /* Ajusta la distancia desde la parte inferior */
-    right: 14px; /* Ajusta la distancia desde la parte derecha */
-    width: 70px;
-    height: 70px;
-    color: #5AA1BB;
-    background-color: #D8DBE0;
-    border: 1px solid #000d276a;
+    top: 22%;
+    left: 30%;
+    width: 40%;
+    color: #000D27;
+    background-color: #a2d0e0;
+    border: 1px solid #000d2766;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    }
 #RectanguloCards{
     margin-top: 20px;
     display: flex;
@@ -110,37 +114,29 @@ body {
     width: 70vw;
     gap: 20px;
 }
-.Zonecard{
+.Autorizacioncard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 25px;
     background-color: #D8DBE0;
     border: 1px solid #000d276e;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.card-img-top{
-    margin-top: 25px;
-    margin-left: 12px;
-}
 .card-body {
+    /*background-color: #35bf3a;*/
     width: 350px;
-    margin-left: 12px;
     display: flex;
-    padding-top: 20px;
-    padding-left: 20px;
-    justify-content: space-between; /* Alinea los elementos horizontalmente */
-    align-items: flex-start; /* Alinea los elementos verticalmente */
+    justify-content: space-between; 
   }
-  
-  .card-title {
-    margin-top: 8px;
-  }
-  
-  #detallesBTN {
-    color: #385557;
-    background-color: #c8d4fd;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+#AutorizacionValue{
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    background-color: #DEE4F5;
+    width: 14%;
 }
-
 #eliminarBTN {
     border-radius: 15px;
     width: 40px;
@@ -149,63 +145,11 @@ body {
     border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-  
 .RectanguloInf{
     height: 10%;
     background-color: #D8DBE0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.VentanaAgregarZona{
-    background-color: #e0e4e8;
-    color: #385557;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 28%;
-    height: 75%;
-    padding: 33px;
-    min-height: 250px;
-    border-radius: 22px;
-    position: absolute;
-    left: 40%;
-    top: 12%;
-}
-#TituloVentanaZona{
-    font-size: 32px;
-}
-#CerrarVentanaAgregarZonaBTN{ 
-    width: 70px;
-    color: #000D27;
-    background-color: #dfcaca;
-    border: 1px solid #000d2766;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 81%;
-    top: 3%;
-}
-#AgregarVentanaAgregarZonaBTN{ 
-    width: 120px;
-    color: #000D27;
-    background-color: #a2d0e0;
-    border: 1px solid #000d2766;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 37%;
-    top: 88%;
-}
-#AgregarPlantaVentanaBTM{
-    font-weight: bold;
-    width: 48px;
-    height: 40px;
-    color: #5AA1BB;
-    background-color: #D8DBE0;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-#DescripcionZona{
-    resize: none;
-}
-
 
 
 

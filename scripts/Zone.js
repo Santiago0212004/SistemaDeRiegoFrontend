@@ -1,12 +1,12 @@
 let usuarioJSON = window.localStorage.getItem("Usuario");
-authorization=JSON.parse(usuarioJSON).authorization.type;
+const usuarioMaster = JSON.parse(usuarioJSON);
+const authorization=JSON.parse(usuarioJSON).authorization.type;
 
 class Zone{
     constructor(zone){
         this.zone = zone;
     }
-
-
+    
     render(){
         let container = document.createElement('div');
         container.classList.add('Zonecard');
@@ -26,6 +26,44 @@ class Zone{
         a.classList.add('btn');
         a.classList.add('btn-primary');
         a.setAttribute('id', 'detallesBTN');
+
+        
+        if(authorization=="MASTER"){
+            let eliminar = document.createElement('eliminar');
+            eliminar.classList.add('btn');
+            eliminar.classList.add('btn-primary');
+            eliminar.setAttribute('id', 'eliminarBTN');
+            
+             body.appendChild(eliminar);
+             
+            eliminar.textContent = "X";
+
+            eliminar.addEventListener('click', e => {
+                e.preventDefault();
+                //eliminar Zona
+                let zona = {
+                    name: this.zone.name,
+                    description: this.zone.description,
+                    id:this.zone.id
+                };
+                let eliminarZonaRespuesta = {
+                    master: usuarioMaster,
+                    zone: zona
+                };
+                fetch('http://localhost:8080/zones/delete', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(eliminarZonaRespuesta)
+                })
+                .then(response => {
+                    console.log(response); // Imprime la respuesta HTTP en la consola
+                    return response;
+                });
+                location.reload();//Pa recargar la pagina
+            })
+        }
 
         let img = document.createElement('img');
         img.classList.add('card-img-top');
@@ -47,9 +85,9 @@ class Zone{
         a.addEventListener('click', e => {
             e.preventDefault();
             let json = JSON.stringify(this.zone);
-            window.localStorage.setItem('Zona',json);
+            window.localStorage.setItem('ZonaActual',json);
             if(authorization=="MASTER"){
-                location.href = "agregarUsuario.html";
+                location.href = "usuariosZona.html";
             }else if(authorization=="USER"){
                 location.href = "estadisticaZona.html";
             }

@@ -9,24 +9,16 @@ console.log(identification);
 
 
 const rectanguloCards = document.getElementById("RectanguloCards");
-const agregarBTN = document.getElementById('AgregarBTM');
 const zonasBTN = document.getElementById('ZonasBTM');
 const usuariosBTN = document.getElementById('UsuariosBTM');
+const autorizacionesBTN = document.getElementById('AutorizacionesBTM');
 const textoMaster = document.getElementById('textoMaster');
-
-
 
 usuariosBTN.disabled = true;
 usuariosBTN.style.opacity = '0.9'; // Reduce la opacidad
 usuariosBTN.style.cursor = 'not-allowed'; // Cambia el cursor
 usuariosBTN.style.backgroundColor = '#D5D3D0';
 
-const zonas = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    window.location.href = 'zones.html';
-};
-
-zonasBTN.addEventListener('click', zonas);
 
 async function getUsers(){
     let response = await fetch("http://localhost:8080/users/all",{
@@ -38,7 +30,7 @@ async function getUsers(){
     });
     let json = await response.json();
     console.log(json);
-
+    localStorage.setItem('Estado', "USUARIOS");
     json.forEach(users => {
         let user = new User(users).render();
         console.log(user);
@@ -46,6 +38,20 @@ async function getUsers(){
     });
 }
 getUsers();
+
+
+const zonas = (event) => {
+    event.preventDefault(); // Evita el comportamiento predeterminado del botón
+    window.location.href = 'zones.html';
+};
+
+const autorizaciones = (event) => {
+    event.preventDefault(); // Evita el comportamiento predeterminado del botón
+    window.location.href = 'autorizaciones.html';
+};
+
+zonasBTN.addEventListener('click', zonas);
+autorizacionesBTN.addEventListener('click', autorizaciones); 
 
 
 
