@@ -7,15 +7,19 @@ class Sensor {
 
         let container = document.createElement('div');
         container.classList.add('Sensorcard');
-        container.style.width = '400px';
+        container.style.width = '495px';
         container.style.height = '60px';
 
         let body = document.createElement('div');
         body.classList.add('card-body');
 
+        let id = document.createElement('p');
+        id.classList.add('card-title');
+        id.setAttribute('id', 'idSensor');
+
         let title = document.createElement('h5');
         title.classList.add('card-title');
-        title.setAttribute('id', 'DescripcionSensor');
+        title.setAttribute('id', 'DescripcionSensorEntrada');
 
         let text = document.createElement('p');
         text.classList.add('card-title');
@@ -36,12 +40,15 @@ class Sensor {
         eliminar.setAttribute('id', 'eliminarBTN');
 
         container.appendChild(body);
+        body.appendChild(id);
         body.appendChild(title);
         body.appendChild(text);
         body.appendChild(text2);
+        body.appendChild(detalles);
         body.appendChild(eliminar);
     
-
+        
+        id.textContent = this.sensor.id;
         title.textContent = this.sensor.description;
         text.textContent = this.sensor.sensorType.model
         text2.textContent = this.sensor.sensorType.unit

@@ -7,15 +7,19 @@ class Actuador {
 
         let container = document.createElement('div');
         container.classList.add('Actuadorcard');
-        container.style.width = '400px';
+        container.style.width = '495px';
         container.style.height = '60px';
 
         let body = document.createElement('div');
         body.classList.add('card-body');
 
+        let id = document.createElement('p');
+        id.classList.add('card-title');
+        id.setAttribute('id', 'idActuador');
+
         let title = document.createElement('h5');
         title.classList.add('card-title');
-        title.setAttribute('id', 'DescripcionActuador');
+        title.setAttribute('id', 'DescripcionActuadorEntrada');
 
         let text = document.createElement('p');
         text.classList.add('card-title');
@@ -32,11 +36,14 @@ class Actuador {
         eliminar.setAttribute('id', 'eliminarBTN');
 
         container.appendChild(body);
+        body.appendChild(id);
         body.appendChild(title);
         body.appendChild(text);
+        body.appendChild(detalles);
         body.appendChild(eliminar);
     
 
+        id.textContent = this.actuador.id;
         title.textContent = this.actuador.description;
         text.textContent = this.actuador.actuatorType.model
         detalles.textContent = "?";

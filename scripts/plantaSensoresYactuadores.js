@@ -260,7 +260,7 @@ const abrirVentanaAgregarActuador = (event) => {
             console.log(response); // Imprime la respuesta HTTP en la consola
             return response;
         })
-        //location.reload();//Pa recargar la pagina
+        location.reload();//Pa recargar la pagina
         ventanaAgregarActuador.style.display = 'none';
     };
     agregarVentanaAgregarActuadorBTN.addEventListener('click', agregarActuador); 

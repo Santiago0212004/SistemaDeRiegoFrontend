@@ -167,16 +167,16 @@ body {
   .ContainerInteriorIzquierdo,
   .ContainerInteriorDerecho {
     flex-grow: 1;
-    margin: 0 auto; /* Agrega esta línea para centrar horizontalmente */
+    padding-left: 30px;
   }
   
   .ContainerInteriorIzquierdo {
-    width: 60%;
-    background-color: #25b41e;
+    width: 95%;
+    /*background-color: #25b41e;*/
   }
   .ContainerInteriorDerecho {
-    width: 60%;
-    background-color: #c4822c;
+    width: 95%;
+    /*background-color: #c4822c;*/
   }
 #AgregarSensorBTN{ 
   position: absolute;
@@ -200,9 +200,6 @@ body {
   border: 1px solid #000d276a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
-
 
 .VentanaAgregarSensor{
   background-color: #e0e4e8;
@@ -280,6 +277,110 @@ body {
   position: absolute;
   left: 30%;
   top: 84%;
+}
+
+
+.Actuadorcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #D8DBE0;
+  border: 1px solid #000d276e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+  /*background-color: #35bf3a;*/
+  width: 350px;
+  display: flex;
+  justify-content: space-between; 
+}
+#idActuador{
+  border-radius: 30px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 10%;
+}
+#DescripcionActuadorEntrada{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 45%;
+}
+#ModeloActuador{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 35%;
+}
+#detallesBTN {
+  color: #385557;
+  background-color: #c8d4fd;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#eliminarBTN {
+  border-radius: 15px;
+  width: 40px;
+  color: #385557;
+  background-color: #FF8888;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.Sensorcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #D8DBE0;
+  border: 1px solid #000d276e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+  /*background-color: #35bf3a;*/
+  width: 350px;
+  display: flex;
+  justify-content: space-between; 
+}
+#idSensor{
+  border-radius: 30px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 10%;
+}
+#DescripcionSensorEntrada{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 45%;
+}
+#ModeloSensor{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 35%;
+}
+#UnidadesSensor{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 20%;
 }
 
 

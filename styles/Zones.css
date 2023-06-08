@@ -170,7 +170,7 @@ body {
     border: 1px solid #000d276a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 28%;
-    height: 75%;
+    height: 60%;
     padding: 33px;
     min-height: 250px;
     border-radius: 22px;
@@ -200,15 +200,6 @@ body {
     position: absolute;
     left: 37%;
     top: 88%;
-}
-#AgregarPlantaVentanaBTM{
-    font-weight: bold;
-    width: 48px;
-    height: 40px;
-    color: #5AA1BB;
-    background-color: #D8DBE0;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 #DescripcionZona{
     resize: none;

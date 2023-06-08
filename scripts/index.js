@@ -5,6 +5,7 @@ const ConfirmPassword = document.getElementById('ConfirmPassword');
 const UserName = document.getElementById('UserName');
 const AccessKey = document.getElementById('AccessKey');
 const RegButton = document.getElementById('RegButton');
+const InicializarBTN = document.getElementById('InicializarBTN');
 localStorage.clear();
 //GET Request
 
@@ -74,6 +75,22 @@ const register = (event) => {
 };
 
 RegButton.addEventListener('click', register);
+
+
+const inicializar = (event) => {
+    event.preventDefault(); // Evita el comportamiento predeterminado del botón
+    fetch('http://localhost:8080/sh', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        console.log(response); // Imprime la respuesta HTTP en la consola
+        return response;
+    })
+};
+InicializarBTN.addEventListener('click', inicializar);
 
 /*const login =() => {
     let userObj = {
