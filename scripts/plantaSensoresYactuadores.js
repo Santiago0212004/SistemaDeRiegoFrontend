@@ -19,15 +19,7 @@ textoNombrePlanta.textContent = plantaActual.name;
 textoDescripcionPlanta.textContent = plantaActual.description;
 
 //botones Estadistica y plantas (Volver a la Zona)
-const estadisticaBTN = document.getElementById('EstadisticaBTN');
 const plantasBTN = document.getElementById('PlantasBTN');
-
-const estadistica = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    localStorage.removeItem('plantaActual');
-    window.location.href = 'estadisticaZona.html';
-};
-estadisticaBTN.addEventListener('click', estadistica);
 
 const plantas = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
@@ -37,16 +29,10 @@ const plantas = (event) => {
 plantasBTN.addEventListener('click', plantas); 
 
 //Menu Bar
-
-const datosBTN = document.getElementById('DatosBTN');
 //const syABTN = document.getElementById('SyABTN');
 const historialBTN = document.getElementById('HistorialBTN');
 const ajustesBTN = document.getElementById('AjustesBTN');
 
-const datos = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    window.location.href = 'plantaDatos.html';
-};
 const historial = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
     window.location.href = 'plantaHistorial.html';
@@ -56,7 +42,6 @@ const ajustes = (event) => {
     window.location.href = 'plantaAjustes.html';
 };
 
-datosBTN.addEventListener('click', datos);
 historialBTN.addEventListener('click', historial);
 ajustesBTN.addEventListener('click', ajustes);
 

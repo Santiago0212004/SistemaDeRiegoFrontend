@@ -61,14 +61,6 @@ body {
     max-height: calc(100% - 8px); /* Reducimos 4 píxeles en cada lado */
     margin: -4px; /* Agregamos un margen negativo para compensar el tamaño reducido */
   }
-  #EstadisticaBTN{ 
-    margin-right: 20px; 
-    width: 120px;
-    color: #000D27;
-    background-color: #E0DDD8;
-    border: 1px solid #000d2766;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 #PlantasBTN{
     margin-right: 20px; 
     width: 120px;
@@ -98,17 +90,6 @@ body {
     background-color: #ECEDF2;
     display: flex;
     padding-left: 250px;
-}
-.DatosLink{
-    background-color: #7AA0EB;
-    width: 90px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #474747;
 }
 .SensoresYActuadoresLink{
     background-color: #9FBDF7;

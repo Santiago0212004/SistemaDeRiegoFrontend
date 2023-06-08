@@ -53,7 +53,7 @@ class Planta{
             e.preventDefault();
             let json = JSON.stringify(this.planta);
             window.localStorage.setItem('plantaActual',json);
-            location.href = "plantaDatos.html";
+            location.href = "plantaSensoresYActuadores.html";
         })
 
         eliminar.addEventListener('click', e => {

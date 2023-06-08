@@ -9,7 +9,6 @@ const textoDescripcionZona = document.getElementById('textoDescripcionZona');
 textoNombreZona.textContent = zonaActual.name;
 textoDescripcionZona.textContent = zonaActual.description;
 
-const estadisticaBTN = document.getElementById('EstadisticaBTN');
 const plantasBTN = document.getElementById('PlantasBTN');
 const zonasBTN = document.getElementById('ZonasBTN');
 
@@ -17,12 +16,6 @@ plantasBTN.disabled = true;
 plantasBTN.style.opacity = '0.9'; // Reduce la opacidad
 plantasBTN.style.cursor = 'not-allowed'; // Cambia el cursor
 plantasBTN.style.backgroundColor = '#D5D3D0';
-
-const estadistica = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    window.location.href = 'estadisticaZona.html';
-};
-estadisticaBTN.addEventListener('click', estadistica);
 
 const zonas = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón

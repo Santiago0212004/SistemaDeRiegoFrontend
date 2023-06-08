@@ -19,15 +19,8 @@ textoNombrePlanta.textContent = plantaActual.name;
 textoDescripcionPlanta.textContent = plantaActual.description;
 
 //botones Estadistica y plantas (Volver a la Zona)
-const estadisticaBTN = document.getElementById('EstadisticaBTN');
 const plantasBTN = document.getElementById('PlantasBTN');
 
-const estadistica = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    localStorage.removeItem('plantaActual');
-    window.location.href = 'estadisticaZona.html';
-};
-estadisticaBTN.addEventListener('click', estadistica);
 
 const plantas = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
@@ -38,15 +31,10 @@ plantasBTN.addEventListener('click', plantas);
 
 //Menu Bar
 
-const datosBTN = document.getElementById('DatosBTN');
 const syABTN = document.getElementById('SyABTN');
 //const historialBTN = document.getElementById('HistorialBTN');
 const ajustesBTN = document.getElementById('AjustesBTN');
 
-const datos = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    window.location.href = 'plantaDatos.html';
-};
 const sensoresYactuadores = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
     window.location.href = 'plantaSensoresYactuadores.html';
@@ -56,6 +44,5 @@ const ajustes = (event) => {
     window.location.href = 'plantaAjustes.html';
 };
 
-datosBTN.addEventListener('click', datos);
 syABTN.addEventListener('click', sensoresYactuadores);
 ajustesBTN.addEventListener('click', ajustes);
