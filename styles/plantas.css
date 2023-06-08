@@ -1,0 +1,208 @@
+body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+.Banner {
+    background-color: #7AA0EB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 75vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#textoMaster {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+#textoNombreZona {
+    font-size: 32px;
+}
+#textoDescripcionZona {
+   border-radius: 10px;
+   width: 95%;
+   background-color: #DEE4F5;
+}
+#ZonasBTN{
+    width: 100px;
+    color: #000D27;
+    background-color: #E0DDD8;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Contenedor {
+    height: 100vh;
+    left: 25vw;
+    width: 80vw;
+    background-color: #f9f9f9;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.RectanguloSup{
+    height: 10%;
+    background-color: #D8DBE0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 14px;
+    padding-left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+}
+.logo-container {
+    margin-right: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E9EBEF;
+    border: 1px solid #32374f30;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+#logo {
+    max-width: calc(100% - 8px); /* Reducimos 4 píxeles en cada lado */
+    max-height: calc(100% - 8px); /* Reducimos 4 píxeles en cada lado */
+    margin: -4px; /* Agregamos un margen negativo para compensar el tamaño reducido */
+  }
+  #EstadisticaBTN{ 
+    margin-right: 20px; 
+    width: 120px;
+    color: #000D27;
+    background-color: #E0DDD8;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#PlantasBTN{
+    margin-right: 20px; 
+    width: 120px;
+    color: #000D27;
+    background-color: #E0DDD8;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.RectanguloPrincipal{
+    height: 80%;
+    background-color: #ECEDF2;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#AgregarBTN{ 
+    position: absolute;
+    bottom: 13vh; /* Ajusta la distancia desde la parte inferior */
+    right: 13vh; /* Ajusta la distancia desde la parte derecha */
+    width: 70px;
+    height: 70px;
+    color: #5AA1BB;
+    background-color: #D8DBE0;
+    border: 1px solid #000d276a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#RectanguloCards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    width: 70vw;
+    gap: 20px;
+}  
+
+.Plantacard{
+    border-radius: 25px;
+    background-color: #D8DBE0;
+    border: 1px solid #000d276e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-img-top{
+    margin-top: 25px;
+    margin-left: 12px;
+}
+.card-body {
+    width: 350px;
+    margin-left: 12px;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    justify-content: space-between; /* Alinea los elementos horizontalmente */
+    align-items: flex-start; /* Alinea los elementos verticalmente */
+  }
+  
+  .card-title {
+    margin-top: 8px;
+  }
+  
+  #detallesBTN {
+    color: #385557;
+    background-color: #c8d4fd;
+    border: 1px solid #000d276a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#eliminarBTN {
+    border-radius: 15px;
+    width: 40px;
+    color: #385557;
+    background-color: #FF8888;
+    border: 1px solid #000d276a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.RectanguloInf{
+    height: 10%;
+    background-color: #D8DBE0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.VentanaAgregarPlanta{
+    background-color: #e0e4e8;
+    color: #385557;
+    border: 1px solid #000d276a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 28%;
+    height: 55%;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 40%;
+    top: 18%;
+}
+#TituloVentanaPlanta{
+    font-size: 32px;
+}
+#CerrarVentanaAgregarPlantaBTN{ 
+    width: 70px;
+    color: #000D27;
+    background-color: #dfcaca;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 81%;
+    top: 3%;
+}
+#AgregarVentanaAgregarPlantaBTN{ 
+    width: 120px;
+    color: #000D27;
+    background-color: #a2d0e0;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 37%;
+    top: 84%;
+}
+#DescripcionPlanta{
+    resize: none;
+}
+
+
+
+
+
+

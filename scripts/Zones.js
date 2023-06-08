@@ -124,7 +124,26 @@ if(authorization=="MASTER"){
     autorizacionesBTN.style.display = 'none';
     textoMaster.style.display = 'none';
 
-
+    async function getZonesUser(){
+        let response = await fetch("http://localhost:8080/users/zones",{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'identification': usuario.identification
+            }
+        });
+        let json = await response.json();
+        console.log(json);
+    
+        localStorage.setItem('Estado', "ZONASUSUARIO");
+    
+        json.forEach(zones => {
+            let zone = new Zone(zones).render();
+            console.log(zone);
+            rectanguloCards.appendChild(zone);
+        });
+    }
+    getZonesUser();
 }
 
 
