@@ -51,7 +51,9 @@ class Planta{
         
         a.addEventListener('click', e => {
             e.preventDefault();
-
+            let json = JSON.stringify(this.planta);
+            window.localStorage.setItem('plantaActual',json);
+            location.href = "plantaDatos.html";
         })
 
         eliminar.addEventListener('click', e => {

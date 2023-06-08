@@ -11,6 +11,7 @@ textoDescripcionZona.textContent = zonaActual.description;
 
 const estadisticaBTN = document.getElementById('EstadisticaBTN');
 const plantasBTN = document.getElementById('PlantasBTN');
+const zonasBTN = document.getElementById('ZonasBTN');
 
 plantasBTN.disabled = true;
 plantasBTN.style.opacity = '0.9'; // Reduce la opacidad
@@ -22,6 +23,13 @@ const estadistica = (event) => {
     window.location.href = 'estadisticaZona.html';
 };
 estadisticaBTN.addEventListener('click', estadistica);
+
+const zonas = (event) => {
+    event.preventDefault(); // Evita el comportamiento predeterminado del botón
+    localStorage.removeItem('ZonaActual');
+    window.location.href = 'zones.html';
+};
+zonasBTN.addEventListener('click', zonas);
 
 
 //INICIA VISUALIZAR PLANTAS
