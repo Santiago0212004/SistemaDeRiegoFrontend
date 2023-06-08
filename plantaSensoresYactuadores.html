@@ -39,9 +39,58 @@
           <div  class="HistorialLink" id="HistorialBTN">Historial</div>
           <div  class="AjustesLink" id="AjustesBTN">Ajustes</div>
         </div>
-        <div  class="RectanguloPrincipal"> 
-
+        <div class="RectanguloPrincipal">
+          <div class="ContainerIzquierdo">
+            <h2>Sensores</h2>
+            <div class="ContainerInteriorIzquierdo" id="ContainerInteriorIzquierdo"></div>
+          </div>
+          <div class="ContainerDerecho">
+            <h2>Actuadores</h2>
+            <div class="ContainerInteriorDerecho" id="ContainerInteriorDerecho"></div>
+          </div>
+          <p><button id="AgregarSensorBTN" type="submit" class="btn btn-primary">
+            <img src="images/mas.png" style="width: 46px; height: 46px; vertical-align: middle;">
+        </button></p>
+          <p><button id="AgregarActuadorBTN" type="submit" class="btn btn-primary">
+            <img src="images/mas.png" style="width: 46px; height: 46px; vertical-align: middle;">
+        </button></p>
         </div>
+  </div>
+  <div class="VentanaAgregarSensor" id="VentanaAgregarSensor">
+    <label class="form-label" id="TituloVentanaSensor">Nuevo Sensor</label>
+    <p><button id="CerrarVentanaAgregarSensorBTN" type="submit" class="btn btn-primary">Atras</button></p>
+    <p><button id="AgregarVentanaAgregarSensorBTN" type="submit" class="btn btn-primary">Agregar Sensor</button></p>
+    <div class="mb-3">
+      <label class="form-label">Descripcion del Sensor</label>
+      <input type="text" class="form-control" id="DescripcionSensor">
+    </div>
+    <div class="row g-2 align-items-center">
+      <label class="form-label">Tipo de Sensor</label>
+      <select class="form-select" id="TipoSensor">
+        <!--Aqui se agregan las plantas para seleccionar una-->
+      </select>
+      <div id="tipoSensorHelpBlock" class="form-text">
+        Selecciona el tipo de Sensor.
+      </div>
+    </div>
+  </div>
+  <div class="VentanaAgregarActuador" id="VentanaAgregarActuador">
+    <label class="form-label" id="TituloVentanaActuador">Nuevo Actuador</label>
+    <p><button id="CerrarVentanaAgregarActuadorBTN" type="submit" class="btn btn-primary">Atras</button></p>
+    <p><button id="AgregarVentanaAgregarActuadorBTN" type="submit" class="btn btn-primary">Agregar Actuador</button></p>
+    <div class="mb-3">
+      <label class="form-label">Descripcion del Actuador</label>
+      <input type="text" class="form-control" id="DescripcionActuador">
+    </div>
+    <div class="row g-2 align-items-center">
+      <label class="form-label">Tipo de Actuador</label>
+      <select class="form-select" id="TipoActuador">
+        <!--Aqui se agregan las plantas para seleccionar una-->
+      </select>
+      <div id="tipoActuadorHelpBlock" class="form-text">
+        Selecciona el tipo de Actuador.
+      </div>
+    </div>
   </div>
 </body>
 
@@ -49,3 +98,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="scripts/plantaSensoresYactuadores.js"></script>
+  <script src="scripts/Sensor.js"></script>
+  <script src="scripts/Actuador.js"></script>

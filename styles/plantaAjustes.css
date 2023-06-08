@@ -151,6 +151,30 @@ body {
     height: 70%;
     background-color: #ECEDF2;
 }
+.ContainerHumedad{
+    background-color: #e0e4e8;
+    color: #385557;
+    border: 1px solid #000d276a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    height: 25%;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 18%;
+    top: 40%;
+}
+#ActualizarBTN{
+    width: 120px;
+    color: #000D27;
+    background-color: #a2d0e0;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 37%;
+    top: 70%;
+}
 
 
 

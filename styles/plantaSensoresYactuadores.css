@@ -149,8 +149,138 @@ body {
 .RectanguloPrincipal{
     height: 70%;
     background-color: #ECEDF2;
+    overflow: auto;
+    display: flex;
+}
+  .ContainerIzquierdo,
+  .ContainerDerecho {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .ContainerInteriorIzquierdo,
+  .ContainerInteriorDerecho {
+    flex-grow: 1;
+    margin: 0 auto; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  .ContainerInteriorIzquierdo {
+    width: 60%;
+    background-color: #25b41e;
+  }
+  .ContainerInteriorDerecho {
+    width: 60%;
+    background-color: #c4822c;
+  }
+#AgregarSensorBTN{ 
+  position: absolute;
+  bottom: 3vh; /* Ajusta la distancia desde la parte inferior */
+  right: 100vh; /* Ajusta la distancia desde la parte derecha */
+  width: 70px;
+  height: 70px;
+  color: #5AA1BB;
+  background-color: #D8DBE0;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+#AgregarActuadorBTN{ 
+  position: absolute;
+  bottom: 3vh; /* Ajusta la distancia desde la parte inferior */
+  right: 13vh; /* Ajusta la distancia desde la parte derecha */
+  width: 70px;
+  height: 70px;
+  color: #5AA1BB;
+  background-color: #D8DBE0;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+
+.VentanaAgregarSensor{
+  background-color: #e0e4e8;
+  color: #385557;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28%;
+  height: 55%;
+  padding: 33px;
+  min-height: 250px;
+  border-radius: 22px;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+}
+#TituloVentanaSensor{
+  font-size: 32px;
+}
+#CerrarVentanaAgregarSensorBTN{ 
+  width: 70px;
+  color: #000D27;
+  background-color: #dfcaca;
+  border: 1px solid #000d2766;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 81%;
+  top: 3%;
+}
+#AgregarVentanaAgregarSensorBTN{ 
+  width: 150px;
+  color: #000D27;
+  background-color: #a2d0e0;
+  border: 1px solid #000d2766;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 33%;
+  top: 84%;
+}
+
+
+
+.VentanaAgregarActuador{
+  background-color: #e0e4e8;
+  color: #385557;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28%;
+  height: 55%;
+  padding: 33px;
+  min-height: 250px;
+  border-radius: 22px;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+}
+#TituloVentanaActuador{
+  font-size: 32px;
+}
+#CerrarVentanaAgregarActuadorBTN{ 
+  width: 70px;
+  color: #000D27;
+  background-color: #dfcaca;
+  border: 1px solid #000d2766;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 81%;
+  top: 3%;
+}
+#AgregarVentanaAgregarActuadorBTN{ 
+  width: 180px;
+  color: #000D27;
+  background-color: #a2d0e0;
+  border: 1px solid #000d2766;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 30%;
+  top: 84%;
+}
 
 
 

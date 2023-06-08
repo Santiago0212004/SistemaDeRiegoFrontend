@@ -59,3 +59,36 @@ const historial = (event) => {
 datosBTN.addEventListener('click', datos);
 syABTN.addEventListener('click', sensoresYactuadores);
 historialBTN.addEventListener('click', historial);
+
+//actualizar Limites de humedad
+
+const actualizarBTN = document.getElementById('ActualizarBTN');
+const limiteHumedad = document.getElementById('LimiteHumedad');
+
+const ajustarLimiteHumedad = (event) => {
+    event.preventDefault(); 
+
+    let plantRequest = {
+        user: usuario,
+        zone: zonaActual,
+        plant: plantaActual
+    };
+
+    fetch('http://localhost:8080/plants/limit', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'humidityLimit': limiteHumedad.value
+        },
+        body: JSON.stringify(plantRequest)
+    })
+    .then(response => {
+        console.log(response); // Imprime la respuesta HTTP en la consola
+        return response;
+    })
+
+};
+
+actualizarBTN.addEventListener('click', ajustarLimiteHumedad);
+
+
