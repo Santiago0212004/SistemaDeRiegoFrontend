@@ -42,7 +42,7 @@ class Autorizacion {
             };
 
             let eliminarAutorizacionRespuesta = {
-                master: usuarioMaster,
+                user: usuarioMaster,
                 authorization: autorizacion
             };
 

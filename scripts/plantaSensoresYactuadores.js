@@ -258,3 +258,28 @@ const cerrarVentanaAgregarActuador = (event) => {
 
 agregarActuadorBTN.addEventListener('click', abrirVentanaAgregarActuador); 
 cerrarVentanaAgregarActuadorBTN.addEventListener('click', cerrarVentanaAgregarActuador);
+
+
+//Ver Mediciones de un Sensor
+const ventanaVerDatosSensor = document.getElementById('VentanaVerDatosSensor');
+ventanaVerDatosSensor.style.display = 'none';
+const cerrarVentanaVerDatosSensorBTN = document.getElementById('CerrarVentanaVerDatosSensorBTN');
+
+const cerrarVentanaVerDatosSensor = (event) => {
+    event.preventDefault();
+    ventanaVerDatosSensor.style.display = 'none';
+};
+
+cerrarVentanaVerDatosSensorBTN.addEventListener('click', cerrarVentanaVerDatosSensor);
+
+//Ver Activaciones de un actuador
+const ventanaVerDatosActuador = document.getElementById('VentanaVerDatosActuador');
+ventanaVerDatosActuador.style.display = 'none';
+const cerrarVentanaVerDatosActuadorBTN = document.getElementById('CerrarVentanaVerDatosActuadorBTN');
+
+const cerrarVentanaVerDatosActuador = (event) => {
+    event.preventDefault();
+    ventanaVerDatosActuador.style.display = 'none';
+};
+
+cerrarVentanaVerDatosActuadorBTN.addEventListener('click', cerrarVentanaVerDatosActuador);

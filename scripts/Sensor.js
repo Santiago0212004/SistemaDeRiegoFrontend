@@ -57,9 +57,8 @@ class Sensor {
 
         detalles.addEventListener('click', e => {
             e.preventDefault();
-            
-
-            
+            const ventanaVerDatosSensor = document.getElementById('VentanaVerDatosSensor');
+            ventanaVerDatosSensor.style.display = 'block';
         })
 
         eliminar.addEventListener('click', e => {

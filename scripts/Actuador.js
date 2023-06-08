@@ -51,9 +51,8 @@ class Actuador {
 
         detalles.addEventListener('click', e => {
             e.preventDefault();
-            
-
-            
+            const ventanaVerDatosActuador = document.getElementById('VentanaVerDatosActuador');
+            ventanaVerDatosActuador.style.display = 'block';
         })
 
         eliminar.addEventListener('click', e => {

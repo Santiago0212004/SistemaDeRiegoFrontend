@@ -86,7 +86,7 @@ class Zone{
                         .then(response => {
                             console.log(response); // Imprime la respuesta HTTP en la consola
                             return response;
-                        });
+                        });   
                     }
                 location.reload();//Pa recargar la pagina
             })
@@ -101,7 +101,9 @@ class Zone{
         container.appendChild(body);
         body.appendChild(title);
         //body.appendChild(text);
-        body.appendChild(a);
+        if(estado!="ZONASUSUARIO"){
+            body.appendChild(a);
+        }
         
         
 
@@ -116,7 +118,7 @@ class Zone{
             if(authorization=="MASTER"){
                 location.href = "usuariosZona.html";
             }else if(authorization=="USER"){
-                location.href = "estadisticaZona.html";
+                location.href = "plantas.html";
             }
         })
         return container;

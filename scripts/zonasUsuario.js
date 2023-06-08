@@ -36,6 +36,7 @@ async function getZonesUser(){
         rectanguloCards.appendChild(zone);
     });
 }
+getZonesUser();
 
 const atras = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
@@ -112,8 +113,8 @@ const abrirVentanaEnlazarZonaUsuario = (event) => {
             console.log(response); // Imprime la respuesta HTTP en la consola
             return response;
         })
-        ventanaEnlazarZonaUsuario.style.display = 'none';
         location.reload();//Pa recargar la pagina
+        ventanaEnlazarZonaUsuario.style.display = 'none';
     };
     agregarVentanaEnlazarZonaUsuarioBTN.addEventListener('click', enlazarZonaUsuario);
 };
@@ -126,6 +127,5 @@ const cerrarVentanaEnlazarZonaUsuario = (event) => {
 };
 
 atrasBTN.addEventListener('click', atras);
-getZonesUser();
 cerrarVentanaEnlazarZonaUsuarioBTN.addEventListener('click', cerrarVentanaEnlazarZonaUsuario);
 agregarBTN.addEventListener('click', abrirVentanaEnlazarZonaUsuario);

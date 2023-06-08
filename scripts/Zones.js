@@ -125,6 +125,7 @@ if(authorization=="MASTER"){
     agregarVentanaAgregarZonaBTN.addEventListener('click', agregarZonaVentanaAgregarZona);
 
 }else if(authorization=="USER"){
+
     ventanaAgregarZona.style.display = 'none';
     agregarBTN.style.display = 'none';
     zonasBTN.style.display = 'none';
@@ -144,7 +145,7 @@ if(authorization=="MASTER"){
         let json = await response.json();
         console.log(json);
     
-        localStorage.setItem('Estado', "ZONASUSUARIO");
+        localStorage.setItem('Estado', "ZONAS");
     
         json.forEach(zones => {
             let zone = new Zone(zones).render();

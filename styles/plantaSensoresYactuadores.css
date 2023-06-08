@@ -366,3 +366,103 @@ body {
 
 
 
+.VentanaVerDatosSensor{
+  background-color: #e0e4e8;
+  color: #385557;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  height: 80%;
+  padding: 33px;
+  min-height: 250px;
+  border-radius: 22px;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+#NombreSensorVentana{
+  font-size: 32px;
+  position: absolute;
+  left: 8%;
+  top: 8%;
+}
+#UltimaMedidaSensor{
+  font-size: 24px;
+  position: absolute;
+  left: 8%;
+  top: 18%;
+}
+#InformacionUltimaMedidaSensor{
+  font-size: 20px;
+  position: absolute;
+  left: 8%;
+  top: 24%;
+}
+#CerrarVentanaVerDatosSensorBTN{ 
+  width: 70px;
+  color: #000D27;
+  background-color: #dfcaca;
+  border: 1px solid #000d2766;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 90%;
+  top: 3%;
+}
+.ContainerMedidas{
+  background-color: #e0e4e8;
+  color: #385557;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  left: 10%;
+  top: 35%;
+}
+
+
+
+
+
+
+.VentanaVerDatosActuador{
+  background-color: #e0e4e8;
+  color: #385557;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  height: 80%;
+  padding: 33px;
+  min-height: 250px;
+  border-radius: 22px;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+#NombreActuador{
+  font-size: 32px;
+  position: absolute;
+  left: 8%;
+  top: 8%;
+}
+#CerrarVentanaVerDatosActuadorBTN{ 
+  width: 70px;
+  color: #000D27;
+  background-color: #dfcaca;
+  border: 1px solid #000d2766;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 90%;
+  top: 3%;
+}
+.ContainerActivaciones{
+  background-color: #e0e4e8;
+  color: #385557;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
