@@ -21,6 +21,45 @@ body {
     top: 0;
     left: 5px;
 }
+
+
+#modeloSensor{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+}
+#unidadesSensor{
+    width: 80%;
+    position: absolute;
+    top: 27%;
+}
+#AgregarSensorBTN{ 
+    position: absolute;
+    top: 34%;
+    left: 30%;
+    width: 45%;
+    color: #000D27;
+    background-color: #a2d0e0;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#modeloActuador{
+    width: 80%;
+    position: absolute;
+    top: 58%;
+}
+#AgregarActuadorBTN{ 
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    width: 45%;
+    color: #000D27;
+    background-color: #a2d0e0;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .Contenedor {
     height: 100vh;
     left: 20vw;
@@ -91,74 +130,105 @@ body {
     border: 1px solid #000d2766;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.RectanguloPrincipal{
+.RectanguloPrincipal {
     height: 80%;
     background-color: #ECEDF2;
     overflow: auto;
+    display: flex;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  }
+  
+  .ContainerIzquierdo,
+  .ContainerDerecho {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .ContainerInteriorIzquierdo,
+  .ContainerInteriorDerecho {
+    flex-grow: 1;
+    margin: 0 auto; /* Agrega esta línea para centrar horizontalmente */
+  }
+  
+  .ContainerInteriorIzquierdo {
+    width: 80%;
+    /*background-color: #25b41e;*/
+  }
 
-#RectanguloCards{
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70vw;
-    gap: 10px;
+.TipoActuadorcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #D8DBE0;
+  border: 1px solid #000d276e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.Usercard{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    background-color: #D8DBE0;
-    border: 1px solid #000d276e;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+#NombreTipoActuador{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 45%;
+}
+  
+.TipoSensorcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #D8DBE0;
+  border: 1px solid #000d276e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .card-body {
-    /*background-color: #35bf3a;*/
-    width: 350px;
-    display: flex;
-    justify-content: space-between; 
-  }
-#NombreUsuario{
-    border-radius: 10px;
-    display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
-    background-color: #DEE4F5;
-    width: 45%;
+  /*background-color: #35bf3a;*/
+  width: 300px;
+  display: flex;
+  justify-content: space-between; 
 }
-#DescripcionUsuario{
-    border-radius: 10px;
-    display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
-    background-color: #DEE4F5;
-    width: 35%;
+#NombreTipoSensor{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 45%;
 }
-#detallesBTN {
-    color: #385557;
-    background-color: #c8d4fd;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+#DescripcionTipoSensor{
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  background-color: #DEE4F5;
+  width: 25%;
 }
 #eliminarBTN {
-    border-radius: 15px;
-    width: 40px;
-    color: #385557;
-    background-color: #FF8888;
-    border: 1px solid #000d276a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 40px;
+  color: #385557;
+  background-color: #FF8888;
+  border: 1px solid #000d276a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+  
+  .ContainerInteriorDerecho {
+    width: 80%;
+    /*background-color: #c4822c;*/
+  }
   
 .RectanguloInf{
     height: 10%;
     background-color: #D8DBE0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 
 

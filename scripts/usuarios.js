@@ -12,6 +12,7 @@ const rectanguloCards = document.getElementById("RectanguloCards");
 const zonasBTN = document.getElementById('ZonasBTM');
 const usuariosBTN = document.getElementById('UsuariosBTM');
 const autorizacionesBTN = document.getElementById('AutorizacionesBTM');
+const tiposSyABTM = document.getElementById('TiposSyABTM');
 const textoMaster = document.getElementById('textoMaster');
 
 usuariosBTN.disabled = true;
@@ -50,8 +51,14 @@ const autorizaciones = (event) => {
     window.location.href = 'autorizaciones.html';
 };
 
+const tiposSensoresYActuadores = (event) => {
+    event.preventDefault(); // Evita el comportamiento predeterminado del botón
+    window.location.href = 'tiposSensoresYActuadores.html';
+};
+
 zonasBTN.addEventListener('click', zonas);
 autorizacionesBTN.addEventListener('click', autorizaciones); 
+tiposSyABTM.addEventListener('click', tiposSensoresYActuadores); 
 
 
 

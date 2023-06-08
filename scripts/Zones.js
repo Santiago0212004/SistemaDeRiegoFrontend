@@ -14,6 +14,7 @@ const agregarBTN = document.getElementById('AgregarBTM');
 const zonasBTN = document.getElementById('ZonasBTM');
 const usuariosBTN = document.getElementById('UsuariosBTM');
 const autorizacionesBTN = document.getElementById('AutorizacionesBTM');
+const tiposSyABTM = document.getElementById('TiposSyABTM');
 const textoMaster = document.getElementById('textoMaster');
 
 const ventanaAgregarZona = document.getElementById('VentanaAgregarZona');
@@ -30,6 +31,7 @@ if(authorization=="MASTER"){
     zonasBTN.style.display = 'block';
     usuariosBTN.style.display = 'block';
     autorizacionesBTN.style.display = 'block';
+    tiposSyABTM.style.display = 'block';
     textoMaster.style.display = 'block';
 
     zonasBTN.disabled = true;
@@ -67,6 +69,11 @@ if(authorization=="MASTER"){
     const autorizaciones = (event) => {
         event.preventDefault(); // Evita el comportamiento predeterminado del botón
         window.location.href = 'autorizaciones.html';
+    };
+
+    const tiposSensoresYActuadores = (event) => {
+        event.preventDefault(); // Evita el comportamiento predeterminado del botón
+        window.location.href = 'tiposSensoresYActuadores.html';
     };
     
     const abrirVentanaAgregarZona = (event) => {
@@ -112,6 +119,7 @@ if(authorization=="MASTER"){
     
     usuariosBTN.addEventListener('click', usuarios); 
     autorizacionesBTN.addEventListener('click', autorizaciones);  
+    tiposSyABTM.addEventListener('click', tiposSensoresYActuadores);  
     agregarBTN.addEventListener('click', abrirVentanaAgregarZona);
     cerrarVentanaAgregarZonaBTN.addEventListener('click', cerrarVentanaAgregarZona);
     agregarVentanaAgregarZonaBTN.addEventListener('click', agregarZonaVentanaAgregarZona);
@@ -122,6 +130,7 @@ if(authorization=="MASTER"){
     zonasBTN.style.display = 'none';
     usuariosBTN.style.display = 'none';
     autorizacionesBTN.style.display = 'none';
+    tiposSyABTM.style.display = 'none';
     textoMaster.style.display = 'none';
 
     async function getZonesUser(){

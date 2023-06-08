@@ -83,6 +83,14 @@ body {
     border: 1px solid #000d2766;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#TiposSyABTM{
+    margin-right: 20px; 
+    width: 240px;
+    color: #000D27;
+    background-color: #E0DDD8;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .RectanguloPrincipal{
     height: 80%;
     background-color: #ECEDF2;

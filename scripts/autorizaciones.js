@@ -13,6 +13,7 @@ const agregarBTN = document.getElementById('AgregarBTM');
 const zonasBTN = document.getElementById('ZonasBTM');
 const usuariosBTN = document.getElementById('UsuariosBTM');
 const autorizacionesBTN = document.getElementById('AutorizacionesBTM');
+const tiposSyABTM = document.getElementById('TiposSyABTM');
 const textoMaster = document.getElementById('textoMaster');
 
 autorizacionesBTN.disabled = true;
@@ -53,6 +54,11 @@ const usuarios = (event) => {
     window.location.href = 'usuarios.html';
 };
 
+const tiposSensoresYActuadores = (event) => {
+    event.preventDefault(); // Evita el comportamiento predeterminado del botón
+    window.location.href = 'tiposSensoresYActuadores.html';
+};
+
 const agregarAutorizacion = (event) => {
     event.preventDefault();
     let autorizacion = {
@@ -83,6 +89,7 @@ const agregarAutorizacion = (event) => {
 
 zonasBTN.addEventListener('click', zonas); 
 usuariosBTN.addEventListener('click', usuarios);  
+tiposSyABTM.addEventListener('click', tiposSensoresYActuadores); 
 agregarBTN.addEventListener('click', agregarAutorizacion);
 
 
