@@ -29,7 +29,7 @@ zonasBTN.addEventListener('click', zonas);
 const rectanguloCards = document.getElementById("RectanguloCards");
 
 async function getPlantas(){
-    let response = await fetch("http://localhost:8080/zones/plants",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/zones/plants",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const agregarZonaVentanaAgregarPlanta = (event) => {
     };
     console.log(plantRequest);
 
-    fetch('http://localhost:8080/plants/add', {
+    fetch('http://localhost:8080/sistema_de_riego_api/plants/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

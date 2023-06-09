@@ -16,8 +16,10 @@
 <body>
     <div class="Banner">
       <p id="textoMaster">MASTER</p>
+      <div class="rectanguloAgregarTipoSensor"></div>
       <input type="text" class="form-control" id="modeloSensor" placeholder="Modelo del Sensor">
       <input type="text" class="form-control" id="unidadesSensor" placeholder="Unidades del Sensor">
+      <div class="rectanguloAgregarTipoActuador"></div>
       <p><button id="AgregarSensorBTN" type="submit" class="btn btn-primary">Agregar Tipo de Sensor</button></p>
       <input type="text" class="form-control" id="modeloActuador" placeholder="Modelo del Actuador">
       <p><button id="AgregarActuadorBTN" type="submit" class="btn btn-primary">Agregar Tipo de Actuador</button></p>
@@ -34,11 +36,11 @@
         </div>
         <div class="RectanguloPrincipal">
           <div class="ContainerIzquierdo">
-            <h2>Tipos de Sensores</h2>
+            <h2 class="TituloTipo">Tipos de Sensores</h2>
             <div class="ContainerInteriorIzquierdo" id="ContainerInteriorIzquierdo"></div>
           </div>
           <div class="ContainerDerecho">
-            <h2>Tipos de Actuadores</h2>
+            <h2 class="TituloTipo">Tipos de Actuadores</h2>
             <div class="ContainerInteriorDerecho" id="ContainerInteriorDerecho"></div>
           </div>
         </div>

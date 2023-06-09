@@ -34,7 +34,7 @@ const register = (event) => {
         formData.append('identification', Identification);
         formData.append('username', UserName);
         formData.append('password', Password);
-        fetch('http://localhost:8080/users/register', {
+        fetch('http://localhost:8080/sistema_de_riego_api/users/register', {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ const register = (event) => {
                     identification: Identification.value,
                     password: Password.value,
                 };
-                fetch('http://localhost:8080/users/login', {
+                fetch('http://localhost:8080/sistema_de_riego_api/users/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ RegButton.addEventListener('click', register);
 
 const inicializar = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    fetch('http://localhost:8080/sh', {
+    fetch('http://localhost:8080/sistema_de_riego_api/sh', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -133,7 +133,7 @@ InicializarBTN.addEventListener('click', inicializar);
 }*/
 
 /*async function getCourses() {
-    let response = await fetch("http://localhost:8080/courses/all");
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/courses/all");
     let json = await response.json();
     console.log(json);
     json.forEach(course => {
@@ -157,7 +157,7 @@ InicializarBTN.addEventListener('click', inicializar);
 
     let json = JSON.stringify(course);
 
-    fetch("http://localhost:8080/courses/create", {
+    fetch("http://localhost:8080/sistema_de_riego_api/courses/create", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

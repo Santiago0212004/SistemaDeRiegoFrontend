@@ -7,17 +7,17 @@ class Medida {
 
         let container = document.createElement('div');
         container.classList.add('Medidacard');
-        container.style.width = '600px';
+        container.style.width = '710px';
         container.style.height = '40px';
 
         let body = document.createElement('div');
         body.classList.add('card-body');
 
-        let id = document.createElement('h5');
+        let id = document.createElement('p');
         id.classList.add('card-title');
         id.setAttribute('id', 'idMedida');
 
-        let title = document.createElement('h5');
+        let title = document.createElement('p');
         title.classList.add('card-title');
         title.setAttribute('id', 'FechaMedida');
 

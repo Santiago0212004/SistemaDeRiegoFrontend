@@ -14,20 +14,34 @@ body {
     align-items: center;
     justify-content: center;
 }
-#textoMaster {
-    color: white;
+.rectanguloInformacionZona{
     position: absolute;
-    top: 0;
-    left: 5px;
-}
-#textoNombreZona {
-    font-size: 32px;
-}
-#textoDescripcionZona {
-   border-radius: 10px;
-   width: 95%;
-   background-color: #DEE4F5;
-}
+    top: 30%;
+    height: 50%;
+    width: 90%;
+    border-radius: 25px;
+    margin-top: 15px;
+    background-color: #DEE4F5;
+    border: 1px solid #385557;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #textoNombreZona {
+      position: absolute;
+      top: 33%;
+      font-size: 32px;
+  }
+  #ImagenZona{
+      position: absolute;
+      top: 40%;
+  }
+  #textoDescripcionZona {
+      position: absolute;
+     border-radius: 10px;
+     width: 70%;
+     height: 8%;
+     top: 68%;
+     background-color: #e4e5ea;
+  }
 .Contenedor {
     height: 100vh;
     left: 25vw;
@@ -74,16 +88,36 @@ body {
     background-color: #7AA0EB;
     display: flex;
 }
+.rectanguloInformacionPlanta{
+  position: absolute;
+  top: 9%;
+  height: 13%;
+  width: 60%;
+  left: 15%;
+  border-radius: 25px;
+  margin-top: 15px;
+  background-color: #DEE4F5;
+  border: 1px solid #385557;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 #textoNombrePlanta{
+    position: absolute;
     font-size: 24px;
-    margin-left: 100px;
-    margin-right: 100px;
+    top: 12%;
+    left: 21%;
 }
 #textoDescripcionPlanta {
-    display: inline-block !important;
+    position: absolute;
+    top: 18%;
+    left: 21%;
     border-radius: 10px;
     width: 300px;
-    background-color: #DEE4F5;
+    background-color: #eceef5;
+ }
+ #ImagenPlanta{
+  position: absolute;
+  top: 14%;
+  left: 15%;
  }
 .RectanguloMenu{
     height: 5%;
@@ -94,18 +128,6 @@ body {
 .SensoresYActuadoresLink{
     background-color: #9FBDF7;
     width: 210px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #474747;
-    cursor: pointer;
-}
-.HistorialLink{
-    background-color: #9FBDF7;
-    width: 100px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     display: flex;

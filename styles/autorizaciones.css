@@ -21,6 +21,33 @@ body {
     top: 0;
     left: 5px;
 }
+.rectanguloAgregarAutorizacion{
+    position: absolute;
+    top: 15%;
+    height: 21%;
+    width: 90%;
+    border-radius: 25px;
+    margin-top: 15px;
+    background-color: #DEE4F5;
+    border: 1px solid #385557;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#ValorAutorizacion{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+}
+#AgregarBTM{ 
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    color: #000D27;
+    background-color: #a2d0e0;
+    border: 1px solid #000d2766;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .Contenedor {
     height: 100vh;
     left: 20vw;
@@ -97,21 +124,7 @@ body {
     overflow: auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-#ValorAutorizacion{
-    width: 80%;
-    position: absolute;
-    top: 15%;
-}
-#AgregarBTM{ 
-    position: absolute;
-    top: 22%;
-    left: 30%;
-    width: 40%;
-    color: #000D27;
-    background-color: #a2d0e0;
-    border: 1px solid #000d2766;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+
 #RectanguloCards{
     margin-top: 20px;
     display: flex;

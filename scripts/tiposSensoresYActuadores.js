@@ -40,7 +40,7 @@ autorizacionesBTN.addEventListener('click', autorizaciones);
 const containerInteriorIzquierdo = document.getElementById('ContainerInteriorIzquierdo');
 
 async function getTipoSensor(){
-    let response = await fetch("http://localhost:8080/types/sensors/all",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/types/sensors/all",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ getTipoSensor();
 const containerInteriorDerecho = document.getElementById('ContainerInteriorDerecho');
 
 async function getTipoActuador(){
-    let response = await fetch("http://localhost:8080/types/actuators/all",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/types/actuators/all",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const agregarTipoSensor = (event) => {
 
     console.log(JSON.stringify(SensorTypeRequest));
 
-    fetch('http://localhost:8080/types/sensors/add', {
+    fetch('http://localhost:8080/sistema_de_riego_api/types/sensors/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -132,7 +132,7 @@ const agregarTipoActuador = (event) => {
 
     console.log(JSON.stringify(ActuatorTypeRequest));
 
-    fetch('http://localhost:8080/types/actuators/add', {
+    fetch('http://localhost:8080/sistema_de_riego_api/types/actuators/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

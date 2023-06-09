@@ -52,7 +52,7 @@ class Actuador {
 
         async function getActivaciones(actuadorId){
 
-            let response = await fetch("http://localhost:8080/actuators/activations",{
+            let response = await fetch("http://localhost:8080/sistema_de_riego_api/actuators/activations",{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ class Actuador {
                 actuatorType: this.actuador.actuatorType
             };
 
-            fetch('http://localhost:8080/actuators/delete', {
+            fetch('http://localhost:8080/sistema_de_riego_api/actuators/delete', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

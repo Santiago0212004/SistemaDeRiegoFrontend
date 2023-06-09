@@ -31,20 +31,14 @@ plantasBTN.addEventListener('click', plantas);
 //Menu Bar
 
 const syABTN = document.getElementById('SyABTN');
-const historialBTN = document.getElementById('HistorialBTN');
 //const ajustesBTN = document.getElementById('AjustesBTN');
 
 const sensoresYactuadores = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del botón
     window.location.href = 'plantaSensoresYactuadores.html';
 };
-const historial = (event) => {
-    event.preventDefault(); // Evita el comportamiento predeterminado del botón
-    window.location.href = 'plantaHistorial.html';
-};
 
 syABTN.addEventListener('click', sensoresYactuadores);
-historialBTN.addEventListener('click', historial);
 
 //actualizar Limites de humedad
 
@@ -60,7 +54,7 @@ const ajustarLimiteHumedad = (event) => {
         plant: plantaActual
     };
 
-    fetch('http://localhost:8080/plants/limit', {
+    fetch('http://localhost:8080/sistema_de_riego_api/plants/limit', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

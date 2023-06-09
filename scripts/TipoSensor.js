@@ -11,7 +11,7 @@ class TipoSensor {
 
         let container = document.createElement('div');
         container.classList.add('TipoSensorcard');
-        container.style.width = '400px';
+        container.style.width = '500px';
         container.style.height = '60px';
 
         let body = document.createElement('div');
@@ -55,7 +55,7 @@ class TipoSensor {
                 sensorType: TipoSensor
             };
 
-            fetch('http://localhost:8080/types/sensors/delete', {
+            fetch('http://localhost:8080/sistema_de_riego_api/types/sensors/delete', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

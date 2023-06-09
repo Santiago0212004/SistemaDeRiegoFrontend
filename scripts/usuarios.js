@@ -22,7 +22,7 @@ usuariosBTN.style.backgroundColor = '#D5D3D0';
 
 
 async function getUsers(){
-    let response = await fetch("http://localhost:8080/users/all",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/users/all",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

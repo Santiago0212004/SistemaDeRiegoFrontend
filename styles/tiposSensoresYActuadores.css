@@ -22,6 +22,18 @@ body {
     left: 5px;
 }
 
+.rectanguloAgregarTipoSensor{
+  position: absolute;
+  top: 15%;
+  height: 30%;
+  width: 90%;
+  border-radius: 25px;
+  margin-top: 15px;
+  background-color: #DEE4F5;
+  border: 1px solid #385557;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 #modeloSensor{
     width: 80%;
@@ -35,8 +47,8 @@ body {
 }
 #AgregarSensorBTN{ 
     position: absolute;
-    top: 34%;
-    left: 30%;
+    top: 35%;
+    left: 27%;
     width: 45%;
     color: #000D27;
     background-color: #a2d0e0;
@@ -44,15 +56,26 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.rectanguloAgregarTipoActuador{
+  position: absolute;
+  top: 50%;
+  height: 30%;
+  width: 90%;
+  border-radius: 25px;
+  margin-top: 15px;
+  background-color: #DEE4F5;
+  border: 1px solid #385557;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 #modeloActuador{
     width: 80%;
     position: absolute;
-    top: 58%;
+    top: 55%;
 }
 #AgregarActuadorBTN{ 
     position: absolute;
-    top: 65%;
-    left: 30%;
+    top: 70%;
+    left: 27%;
     width: 45%;
     color: #000D27;
     background-color: #a2d0e0;
@@ -149,11 +172,16 @@ body {
   h2 {
     text-align: center;
   }
+
+.TituloTipo{
+  margin-top: 15px;
+}
   
   .ContainerInteriorIzquierdo,
   .ContainerInteriorDerecho {
     flex-grow: 1;
     margin: 0 auto; /* Agrega esta línea para centrar horizontalmente */
+    gap: 20px;
   }
   
   .ContainerInteriorIzquierdo {
@@ -166,6 +194,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  margin-top: 15px;
   background-color: #D8DBE0;
   border: 1px solid #000d276e;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -184,6 +213,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  margin-top: 15px;
   background-color: #D8DBE0;
   border: 1px solid #000d276e;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -192,6 +222,8 @@ body {
   /*background-color: #35bf3a;*/
   width: 300px;
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
   justify-content: space-between; 
 }
 #NombreTipoSensor{

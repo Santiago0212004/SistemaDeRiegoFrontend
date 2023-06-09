@@ -23,7 +23,7 @@ autorizacionesBTN.style.backgroundColor = '#D5D3D0';
 
 
 async function getAutorizaciones(){
-    let response = await fetch("http://localhost:8080/authorizations/all",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/authorizations/all",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const agregarAutorizacion = (event) => {
 
     console.log(JSON.stringify(agregarAutorizacionRespuesta));
 
-    fetch('http://localhost:8080/authorizations/add', {
+    fetch('http://localhost:8080/sistema_de_riego_api/authorizations/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

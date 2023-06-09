@@ -70,7 +70,7 @@ class User {
                     master: usuarioMaster,
                     user: usuario
                 };
-                fetch('http://localhost:8080/users/delete', {
+                fetch('http://localhost:8080/sistema_de_riego_api/users/delete', {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ class User {
                     user: this.user,
                     zone: zonaActual
                 };
-                fetch('http://localhost:8080/zones/unlink', {
+                fetch('http://localhost:8080/sistema_de_riego_api/zones/unlink', {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

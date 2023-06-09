@@ -8,7 +8,7 @@ class TipoActuador {
 
         let container = document.createElement('div');
         container.classList.add('TipoActuadorcard');
-        container.style.width = '400px';
+        container.style.width = '500px';
         container.style.height = '60px';
 
         let body = document.createElement('div');
@@ -45,7 +45,7 @@ class TipoActuador {
                 actuatorType: TipoActuador
             };
 
-            fetch('http://localhost:8080/types/actuators/delete', {
+            fetch('http://localhost:8080/sistema_de_riego_api/types/actuators/delete', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

@@ -66,7 +66,7 @@ class Planta{
             };
             console.log(plantRequest);
 
-            fetch('http://localhost:8080/plants/delete', {
+            fetch('http://localhost:8080/sistema_de_riego_api/plants/delete', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

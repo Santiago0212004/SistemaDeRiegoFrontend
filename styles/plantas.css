@@ -15,21 +15,38 @@ body {
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-#textoMaster {
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 5px;
+.rectanguloInformacionZona{
+  position: absolute;
+  top: 30%;
+  height: 55%;
+  width: 90%;
+  border-radius: 25px;
+  margin-top: 15px;
+  background-color: #DEE4F5;
+  border: 1px solid #385557;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #textoNombreZona {
+    position: absolute;
+    top: 33%;
     font-size: 32px;
 }
+#ImagenZona{
+    position: absolute;
+    top: 40%;
+}
 #textoDescripcionZona {
+    position: absolute;
    border-radius: 10px;
-   width: 95%;
-   background-color: #DEE4F5;
+   width: 70%;
+   height: 8%;
+   top: 68%;
+   background-color: #e4e5ea;
 }
 #ZonasBTN{
+    top: 78%;
+    left: 37%;
+    position: absolute;
     width: 100px;
     color: #000D27;
     background-color: #E0DDD8;

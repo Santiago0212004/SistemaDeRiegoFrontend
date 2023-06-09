@@ -58,7 +58,7 @@ class Sensor {
 
         async function getIinformacionUltimaMedidaSensor(sensorId){
 
-            let response = await fetch("http://localhost:8080/sensors/last",{
+            let response = await fetch("http://localhost:8080/sistema_de_riego_api/sensors/last",{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ class Sensor {
 
         async function getMedidas(sensorId){
 
-            let response = await fetch("http://localhost:8080/sensors/measures",{
+            let response = await fetch("http://localhost:8080/sistema_de_riego_api/sensors/measures",{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ class Sensor {
                 sensorType: this.sensor.sensorType
             };
 
-            fetch('http://localhost:8080/sensors/delete', {
+            fetch('http://localhost:8080/sistema_de_riego_api/sensors/delete', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

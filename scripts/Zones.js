@@ -41,7 +41,7 @@ if(authorization=="MASTER"){
 
     
     async function getZones(){
-        let response = await fetch("http://localhost:8080/zones/all",{
+        let response = await fetch("http://localhost:8080/sistema_de_riego_api/zones/all",{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ if(authorization=="MASTER"){
     
         console.log(JSON.stringify(agregarZonaRespuesta));
 
-        fetch('http://localhost:8080/zones/add', {
+        fetch('http://localhost:8080/sistema_de_riego_api/zones/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -135,7 +135,7 @@ if(authorization=="MASTER"){
     textoMaster.style.display = 'none';
 
     async function getZonesUser(){
-        let response = await fetch("http://localhost:8080/users/zones",{
+        let response = await fetch("http://localhost:8080/sistema_de_riego_api/users/zones",{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

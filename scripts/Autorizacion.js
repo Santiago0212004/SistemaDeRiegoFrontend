@@ -46,7 +46,7 @@ class Autorizacion {
                 authorization: autorizacion
             };
 
-            fetch('http://localhost:8080/authorizations/delete', {
+            fetch('http://localhost:8080/sistema_de_riego_api/authorizations/delete', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

@@ -16,7 +16,7 @@ const login = (event) => {
 
     acceso=false;
 
-    fetch('http://localhost:8080/users/login', {
+    fetch('http://localhost:8080/sistema_de_riego_api/users/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -18,7 +18,7 @@ ventanaEnlazarZonaUsuario.style.display = 'none';
 textoNombreUsuario.textContent = usuarioActual.username;
 
 async function getZonesUser(){
-    let response = await fetch("http://localhost:8080/users/zones",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/users/zones",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ async function getZonasNoEnlazadasUsuario(){
     console.log(usuarioMaster.identification);
     console.log(usuarioActual.identification);
 
-    let response = await fetch("http://localhost:8080/zones/notLinked",{
+    let response = await fetch("http://localhost:8080/sistema_de_riego_api/zones/notLinked",{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const abrirVentanaEnlazarZonaUsuario = (event) => {
         };
         console.log(agregarEnlaceUsuarioZonaRespuesta);
 
-        fetch('http://localhost:8080/zones/link', {
+        fetch('http://localhost:8080/sistema_de_riego_api/zones/link', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
