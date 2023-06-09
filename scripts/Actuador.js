@@ -49,10 +49,41 @@ class Actuador {
         detalles.textContent = "?";
         eliminar.textContent = "X";
 
+
+        async function getActivaciones(actuadorId){
+
+            let response = await fetch("http://localhost:8080/actuators/activations",{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'actuatorId': actuadorId,
+                    'identification': usuario.identification
+                }
+            });
+            let json = await response.json();
+
+            const containerActivaciones = document.getElementById('ContainerActivaciones');
+            containerActivaciones.innerHTML = '';
+        
+            console.log(json);
+            json.forEach(activaciones => {
+                let activacion = new Activacion(activaciones).render();
+                console.log(activacion);
+                containerActivaciones.appendChild(activacion);
+            });
+        }
+
         detalles.addEventListener('click', e => {
             e.preventDefault();
             const ventanaVerDatosActuador = document.getElementById('VentanaVerDatosActuador');
             ventanaVerDatosActuador.style.display = 'block';
+
+
+            const nombreActuador = document.getElementById('NombreActuador');
+            nombreActuador.textContent = this.actuador.description;
+
+            //Se abre la ventana de Activaciones
+            getActivaciones(this.actuador.id);
         })
 
         eliminar.addEventListener('click', e => {

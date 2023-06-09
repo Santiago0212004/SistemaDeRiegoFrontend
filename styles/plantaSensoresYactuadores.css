@@ -420,6 +420,12 @@ body {
   top: 35%;
 }
 
+.Medidacard{
+  background-color: #D8DBE0;
+  border: 1px solid #000d276e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 
 
@@ -465,4 +471,9 @@ body {
   position: absolute;
   left: 10%;
   top: 20%;
+}
+.Activacioncard{
+  background-color: #D8DBE0;
+  border: 1px solid #000d276e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
 }

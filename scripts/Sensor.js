@@ -55,10 +55,70 @@ class Sensor {
         detalles.textContent = "?";
         eliminar.textContent = "X";
 
+
+        async function getIinformacionUltimaMedidaSensor(sensorId){
+
+            let response = await fetch("http://localhost:8080/sensors/last",{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'identification': usuario.identification,
+                    'sensorId': sensorId
+                }
+            });
+            let json = await response.json();
+            console.log(json);
+            const informacionUltimaMedidaSensor = document.getElementById('InformacionUltimaMedidaSensor');
+
+            let ultimaMedida=json.value+" "+json.sensor.sensorType.unit;
+            informacionUltimaMedidaSensor.textContent=ultimaMedida;
+        }
+
+        
+        
+
+        async function getMedidas(sensorId){
+
+            let response = await fetch("http://localhost:8080/sensors/measures",{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'sensorId': sensorId,
+                    'identification': usuario.identification
+                }
+            });
+            let json = await response.json();
+
+            const containerMedidas = document.getElementById('ContainerMedidas');
+            containerMedidas.innerHTML = '';
+        
+            console.log(json);
+            json.forEach(medidas => {
+                let medida = new Medida(medidas).render();
+                console.log(medida);
+                containerMedidas.appendChild(medida);
+            });
+        }
+
         detalles.addEventListener('click', e => {
             e.preventDefault();
+            
+            console.log(usuario.identification);
+            console.log(this.sensor.id);
+
             const ventanaVerDatosSensor = document.getElementById('VentanaVerDatosSensor');
+
             ventanaVerDatosSensor.style.display = 'block';
+
+            const nombreSensorVentana = document.getElementById('NombreSensorVentana');
+            nombreSensorVentana.textContent = this.sensor.description;
+
+            getIinformacionUltimaMedidaSensor(this.sensor.id);
+
+            //Se abre la ventana de Medidas
+            getMedidas(this.sensor.id);
+
+
         })
 
         eliminar.addEventListener('click', e => {
