@@ -62,7 +62,7 @@ const register = (event) => {
                     // Continúa con el manejo de la respuesta aquí
                     user=data;
                     localStorage.setItem('Usuario', JSON.stringify(user));
-                    window.location.href = 'Zones.html';
+                    window.location.href = 'zones.html';
                 })
             }else{
                 alert(response.status)

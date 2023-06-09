@@ -40,7 +40,7 @@ const login = (event) => {
         localStorage.setItem('Usuario', JSON.stringify(user));
 
         if(acceso){
-            window.location.href = 'Zones.html';
+            window.location.href = 'zones.html';
         }
     })
     .catch(error => {
